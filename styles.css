@@ -3,15 +3,21 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
+    margin-left: 10px;
     padding: 0;
     font-size: larger;
 }
 
 header {
     background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    color: #0b2905;
+    padding: 400px 0;
+    background-size: cover; /* Cover the entire background */
+font-size: x-large;
+    background-repeat: no-repeat; 
     text-align: center;
+    background-blend-mode: overlay; 
+    background-image: url('/images/background.avif');
 }
 
 header h1 {
@@ -21,6 +27,7 @@ header h1 {
 nav ul {
     list-style-type: none;
     padding: 0;
+
 }
 
 nav ul li {
@@ -29,13 +36,23 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color:white;
     text-decoration: none;
     padding: 5px 10px;
-}
 
+    font-size: larger;
+}
+.heading{
+    margin-bottom: 20px;
+}
+.content-wrapper {
+
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 960;
+}
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #878383;
 }
 
 main {
@@ -62,6 +79,8 @@ section {
 .card img {
     max-width: 100%;
     border-radius: 8px;
+    height: 30em;
+    width: 30em;
 }
 .card {
     background-color: #ffffff;
@@ -104,13 +123,22 @@ section {
 .card .btn:hover {
     background-color: #0056b3;
 }
+#flippable-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px; /* Space between cards */
+}
 
 .card-flip {
     perspective: 1000px; 
     width: 300px;
     height: 200px;
     margin-bottom: 20px;
-    position: relative;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .card-inner {
@@ -120,13 +148,14 @@ section {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+  
 }
-
 .card-flip .card-front, .card-flip .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden; 
+
 }
 
 .card-flip .card-back {
@@ -160,3 +189,4 @@ section {
 .card-flip .btn:hover {
     background-color: #0056b3;
 }
+

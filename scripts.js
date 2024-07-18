@@ -7,4 +7,5 @@ document.addEventListener('DOMContentLoaded', function () {
             cardInner.classList.toggle('is-flipped');
         });
     });
+
 });
